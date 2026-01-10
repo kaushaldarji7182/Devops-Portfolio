@@ -70,14 +70,8 @@ export function Contact() {
                                 Whether you're looking for cloud architecture advice or need a reliable engineer to scale your production environment, I'm just a message away.
                             </p>
 
-                            <a href="mailto:kaushaldarji7182@gmail.com" className="block p-6 bg-zinc-900/30 border border-zinc-800 rounded-xl mb-10 group hover:border-blue-500/50 transition-colors w-fit pr-10 hover:bg-zinc-900/50">
-                                <div className="flex items-center gap-3 text-white font-mono text-lg">
-                                    <Mail className="text-blue-500 w-5 h-5" />
-                                    kaushaldarji7182@gmail.com
-                                </div>
-                            </a>
-
                             <div className="flex gap-4">
+                                <SocialButton icon={<Mail />} href="https://mail.google.com/mail/?view=cm&fs=1&to=kaushaldarji7182@gmail.com" label="Email" />
                                 <SocialButton icon={<Github />} href="https://github.com/kaushaldarji7182" label="GitHub" />
                                 <SocialButton icon={<Linkedin />} href="https://www.linkedin.com/in/kaushaldarji7182" label="LinkedIn" />
                                 <SocialButton icon={<Twitter />} href="https://twitter.com/KAUSHAL2118" label="Twitter" />
