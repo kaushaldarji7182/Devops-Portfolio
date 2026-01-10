@@ -41,7 +41,7 @@ export function Certifications() {
                         title="GITHUB ACTIONS"
                         issuer="Microsoft"
                         date="2026" // Per user request
-                        color="text-white"
+                        color="text-green-500"
                         href="https://learn.microsoft.com/api/credentials/share/en-in/KaushalPrafulDarjiUSTIN-1010/61CE381539CBE2F5?sharingId=C47D8F448C43278A"
                     />
                 </div>
@@ -71,10 +71,10 @@ function CertificationItem({ title, issuer, date, color, href }: { title: string
                         <div>
                             <h3 className={`font-bold ${color} group-hover:opacity-80 transition-opacity flex items-center gap-2`}>
                                 <span>{title}</span>
-                                <ExternalLink className="w-3 h-3 text-zinc-500 shrink-0" />
                             </h3>
                             <p className="text-zinc-500 text-sm flex items-center gap-2 mt-1">
-                                {issuer}
+                                <span>{issuer}</span>
+                                <ExternalLink className="w-3 h-3 text-zinc-500 shrink-0" />
                             </p>
                         </div>
                         <span className="font-mono text-zinc-600 text-sm">{date}</span>
