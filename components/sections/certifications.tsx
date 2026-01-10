@@ -70,8 +70,8 @@ function CertificationItem({ title, issuer, date, color, href }: { title: string
                     <div className="flex justify-between items-start">
                         <div>
                             <h3 className={`font-bold ${color} group-hover:opacity-80 transition-opacity flex items-center gap-2`}>
-                                {title}
-                                <ExternalLink className="w-3 h-3 text-zinc-500" />
+                                <span>{title}</span>
+                                <ExternalLink className="w-3 h-3 text-zinc-500 shrink-0" />
                             </h3>
                             <p className="text-zinc-500 text-sm flex items-center gap-2 mt-1">
                                 {issuer}
