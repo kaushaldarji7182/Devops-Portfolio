@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase } from "lucide-react";
+import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 export function Experience() {
     return (
@@ -87,8 +87,8 @@ function JobCard({ role, company, period, location, isCurrent, bullets, tags }: 
                 <div className="text-blue-400 font-mono text-sm mb-6 uppercase tracking-wider">{company}</div>
 
                 <div className="flex flex-wrap gap-4 text-xs text-zinc-500 font-mono mb-6">
-                    <span className="flex items-center gap-1">📍 {location}</span>
-                    <span className="flex items-center gap-1">📅 {period}</span>
+                    <span className="flex items-center gap-1"><MapPin className="w-3 h-3" /> {location}</span>
+                    <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {period}</span>
                 </div>
 
                 <ul className="space-y-4 mb-8">
