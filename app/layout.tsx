@@ -41,10 +41,9 @@ export default function RootLayout({
                     {children}
                 </div>
                 {/* 
-                  TODO: Add your Google Analytics Measurement ID below or in .env.local 
-                  Example: gaId="G-XXXXXXXXXX" or gaId={process.env.NEXT_PUBLIC_GA_ID}
+                  Google Analytics Measurement ID 
                 */}
-                <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ""} />
+                <GoogleAnalytics gaId="G-W5DR9ETS5Z" />
             </body>
         </html>
     );
