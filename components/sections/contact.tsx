@@ -71,7 +71,19 @@ export function Contact() {
                             </p>
 
                             <div className="flex gap-4">
-                                <SocialButton icon={<Mail />} href="https://mail.google.com/mail/?view=cm&fs=1&to=kaushaldarji7182@gmail.com" label="Email" />
+                                <SocialButton
+                                    icon={<Mail />}
+                                    href="mailto:kaushaldarji7182@gmail.com"
+                                    label="Email"
+                                    onClick={(e) => {
+                                        // If screen width is larger than mobile (768px), open Gmail Web
+                                        if (window.innerWidth > 768) {
+                                            e.preventDefault();
+                                            window.open('https://mail.google.com/mail/?view=cm&fs=1&to=kaushaldarji7182@gmail.com', '_blank');
+                                        }
+                                        // Otherwise, let default mailto behavior happen (opens default mail app)
+                                    }}
+                                />
                                 <SocialButton icon={<Github />} href="https://github.com/kaushaldarji7182" label="GitHub" />
                                 <SocialButton icon={<Linkedin />} href="https://www.linkedin.com/in/kaushaldarji7182" label="LinkedIn" />
                                 <SocialButton icon={<Twitter />} href="https://twitter.com/KAUSHAL2118" label="Twitter" />
@@ -212,12 +224,13 @@ export function Contact() {
     )
 }
 
-function SocialButton({ icon, href, label }: { icon: React.ReactNode, href: string, label: string }) {
+function SocialButton({ icon, href, label, onClick }: { icon: React.ReactNode, href: string, label: string, onClick?: (e: React.MouseEvent) => void }) {
     return (
         <a
             href={href}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={onClick}
             className="w-10 h-10 flex items-center justify-center rounded border border-zinc-800 text-zinc-400 hover:text-white hover:border-blue-500 hover:bg-blue-500/10 transition-all"
             aria-label={label}
         >
