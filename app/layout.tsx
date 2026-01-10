@@ -27,6 +27,8 @@ export const metadata: Metadata = {
     }
 };
 
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -38,6 +40,11 @@ export default function RootLayout({
                 <div className="relative min-h-screen flex flex-col">
                     {children}
                 </div>
+                {/* 
+                  TODO: Add your Google Analytics Measurement ID below or in .env.local 
+                  Example: gaId="G-XXXXXXXXXX" or gaId={process.env.NEXT_PUBLIC_GA_ID}
+                */}
+                <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ""} />
             </body>
         </html>
     );
