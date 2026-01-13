@@ -2,8 +2,6 @@
 
 A high-performance benchmark styling portfolio for a Senior DevOps Engineer, built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**. This project showcases modern web development practices applied to a DevOps context, featuring a terminal-inspired aesthetic, CI/CD pipeline animations, and a fully responsive design.
 
-![Portfolio Preview](./public/preview.png)
-*(Note: Add a screenshot of your portfolio as `preview.png` in the public folder)*
 
 ## ✨ Features
 
